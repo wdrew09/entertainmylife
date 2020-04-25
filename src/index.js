@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { createStore, combineReducers, applyMiddleware, compose} from 'redux';
+import { reducer as formReducer } from 'redux-form'
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

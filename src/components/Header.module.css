@@ -1,0 +1,65 @@
+.Main {
+    height: auto;
+    width: 100%;
+}
+
+.TopButtons {
+    width: 100%;
+    height: 35px;
+}
+
+.SearchIcon {
+    border: none;
+    float: right;
+    margin: 10px 10px 0px 0px;
+}
+
+.SearchIcon:focus {
+    outline: none;
+}
+
+.LogoImage {
+    /* border: solid 1px black; */
+    height: 150px;
+    /* border-top: solid 2px black; */
+    margin-bottom: 0px;
+    align-self: flex-end;
+    margin-bottom: -50px;
+}
+
+.SectionButtons {
+    border-bottom: solid 1px black;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    height: 60px;
+}
+
+.SectionButtonsButton {
+  color: var(--main);
+  width: 100px;
+  border-width: 0px;
+  border-bottom: solid 1px black;
+  padding: 18px 0px;
+  margin: 0px 10px 0px 10px;
+  display: inline-block;
+  font-family: var(--font);
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  }
+
+  .SectionButtonsButton:hover {
+    box-shadow: inset 0px -100px 0px 0px var(--main);
+    color: white;
+  }
+
+  .SectionButtonsButton:focus {
+    box-shadow: inset 0px -100px 0px 0px var(--main);
+    color: white;
+    outline: none;
+  }

@@ -1,0 +1,20 @@
+.Main {
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    background-color: var(--gray-4); 
+    display: flex;
+    justify-content: center; 
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: yellowgreen; */
+    width: 100%;
+    max-width: 1400px;
+    align-self: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}

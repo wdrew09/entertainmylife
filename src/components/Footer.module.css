@@ -1,0 +1,82 @@
+.Main {
+    width: 100%;
+    background-color: var(--gray);
+    color: white;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    padding: 30px;
+}
+
+.Links {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+    margin: auto;
+}
+
+.Links button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font);
+    cursor: pointer;
+}
+
+.Links button:hover {
+    filter: brightness(90%);
+    font-size: 20px;
+}
+
+.Links button:focus {
+    outline: none;
+}
+
+
+.FirstHalf {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.FirstHalf div {
+    display: flex;
+    flex-direction: column;
+}
+
+.SecondHalf {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.SecondHalf div {
+    display: flex;
+    flex-direction: column;
+}
+
+.BackToTop {
+    display: flex;
+    flex-direction: column;
+}
+
+.BackToTop span {
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+
+.BackToTop button {
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.BackToTop button:hover {
+    filter: brightness(90%);
+}
+
+.BackToTop button:focus {
+    outline: none;
+}
