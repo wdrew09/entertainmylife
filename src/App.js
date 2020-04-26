@@ -17,6 +17,8 @@ import Disclosure from './container/Disclosure';
 import Disclaimer from './container/Disclaimer';
 import PrivacyPolicy from './container/PrivacyPolicy';
 
+import Article from './container/Article';
+
 // import NotFound from 
 
 const App = props => {
@@ -42,7 +44,7 @@ const App = props => {
             article: obj.article,
             tags: obj.tags,
             link: obj.link,
-            data: obj.data
+            date: obj.date
           })
             .then(function () {
               console.log("Document successfully written!");
@@ -80,7 +82,7 @@ const App = props => {
           <Route exact path="/"><ListView pageID={'homepage'} /></Route>
           <Route path="/tech/"><ListView pageID={'tech'} /></Route>
           <Route path="/gear/"><ListView pageID={'gear'} /></Route>
-          <Route path="/office/"><ListView pageID={'office'} /></Route>
+          <Route path="/fun/"><ListView pageID={'fun'} /></Route>
           <Route path="/under20/"><ListView pageID={'under20'} /></Route>
           <Route path="/pets/"><ListView pageID={'pets'} /></Route>
           <Route path="/kids/"><ListView pageID={'kids'} /></Route>
@@ -92,6 +94,7 @@ const App = props => {
           <Route path="/disclosure/"><Disclosure/></Route>
           <Route path="/disclaimer/"><Disclaimer/></Route>
           <Route path="/privacypolicy/"><PrivacyPolicy/></Route>
+          <Route path="/:name/:id" component={Article}></Route>
           <Route ><div>404 page not found</div></Route>
         </Switch>
         <Footer />

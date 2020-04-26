@@ -46,7 +46,7 @@ const Header = props => {
             <div className={styles.SectionButtons}>
                 <NavLink activeClassName="active" to="/tech/"><button className={styles.SectionButtonsButton}>Tech</button></NavLink>
                 <NavLink activeClassName="active" to="/gear/"><button className={styles.SectionButtonsButton}>Gear</button></NavLink>
-                <NavLink activeClassName="active" to="/office/"><button className={styles.SectionButtonsButton}>Office</button></NavLink>
+                <NavLink activeClassName="active" to="/fun/"><button className={styles.SectionButtonsButton}>Fun</button></NavLink>
                 <NavLink activeClassName="active" to="/under20/"><button className={styles.SectionButtonsButton}>Under 20</button></NavLink>
 
                 <NavLink exact activeClassName="active" to="/"><img className={styles.LogoImage} src={"/EntertainMyLife1.jpg"} /></NavLink>

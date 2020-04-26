@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch, Redirect, BrowserRouter as Router, Link, NavLink } from 'react-router-dom';
+
 
 import styles from './ListViewItem.module.css';
 
@@ -6,6 +8,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import firebase from '../firebase';
+
+import Article from '../container/Article';
 
 
 
@@ -16,31 +20,41 @@ const ListViewItem = props => {
 
     const [dipslayPicture, setDisplayPicture] = useState()
     const [displayString, setDisplayString] = useState()
-    // console.log(data.imageFolder)
 
     useEffect(() => {
         setDisplayPicture()
-        var storageRef = firebase.storage().ref(data.imageFolder);
+        let imageName = firebase.storage().ref(data.imageFolder).child(data.displayPhoto)
+        imageName.getDownloadURL().then(function (url) {
+                let picture = { name: imageName.name, url: url }
+                setDisplayPicture(picture)
+            })
 
-        storageRef.listAll().then(function (result) {
-            result.items.forEach(function (imageRef) {
-                if (imageRef.name === data.displayPhoto) {
-                    imageRef.getDownloadURL().then(function (url) {
-                        let picture = { name: imageRef.name, url: url }
-                        setDisplayPicture(picture)
-                    })
-                }
-            });
-        }).catch(function (error) {
-            // Handle any errors
-        });
+        // storageRef.listAll().then(function (result) {
+        //     result.items.forEach(function (imageRef) {
+        //         if (imageRef.name === data.displayPhoto) {
+        //             imageRef.getDownloadURL().then(function (url) {
+        //                 let picture = { name: imageRef.name, url: url }
+        //                 setDisplayPicture(picture)
+        //             })
+        //         }
+        //     });
+        // }).catch(function (error) {
+        //     // Handle any errors
+        // });
+
 
         let i = data.article.split('\n').join('')
         setDisplayString(i.slice(0, 150) + '...')
     }, [data.id])
 
-    console.log(dipslayPicture)
+    let dataURL = ''
+    if (data) {
+        if (data.name) {
+            dataURL = "/" + data.name.replace(/\s/g, '-') + "/" + data.id;
+        }
+    }
 
+    console.log(dataURL)
     return (
         <div className={styles.Main}>
             {dipslayPicture ?
@@ -52,7 +66,9 @@ const ListViewItem = props => {
                 <span className={styles.Title}>{data.name}</span>
                 <span className={styles.String}>{displayString}</span>
                 <hr style={{ width: '300px', backgroundColor: 'transparent', height: '0px', border: 'solid 1px var(--gray-2)', borderWidth: '1px 0px 0px 0px' }} />
-                <button className={styles.CheckItOut}>Check it Out!</button>
+                <NavLink to={{ pathname: dataURL, state: data }}>
+                    <button className={styles.CheckItOut}>Check it Out!</button>
+                </NavLink>
             </div>
         </div>
     )

@@ -1,45 +1,28 @@
 {
     "data": [
         {
-            "id": 1,
-            "name": "Bouncy Ball",
-            "imageFolder": "bouncyBall",
-            "displayPhoto": "bouncyBall2.jpg",
-            "article": "Bouncy Ball enatis congue nibh porttitor sed. Nam rhoncus, ligula vel elementum facilisis, lectus nunc placerat arcu, quis egestas lacus massa interdum ante. Integer nisl ex, blandit sit amet odio nec, sollicitudin mattis leo. Nullam pretium aliquam metus quis viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per\n inceptos himenaeos. Aliquam facilisis neque non dolor tincidunt, nec elementum metus condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam lobortis erat sed rutrum luctus. Maecenas imperdiet ac neque non venenatis. Aenean aliquet semper purus, eget semper turpis consectetur sed. Nunc sollicitudin sapien lectus, id tempor enim mollis at.\n Donec tincidunt nisl a porta tristique. Curabitur quis eros vehicula, molestie libero vitae, congue eros. Nunc sit amet mi non urna elementum tincidunt. Aliquam vel sem porttitor, ultrices nisi non, placerat massa. Sed tristique felis sed varius laoreet. Nullam ultricies, nulla eget porta ultrices, quam urna hendrerit erat, non ultricies nibh ex vitae ante. Nullam nulla orci, viverra sed urna sed, accumsan scelerisque tortor. Pellentesque aliquet ornare aliquet. Etiam et nunc sit amet mi auctor tincidunt. Aliquam aliquam ornare ligula. Curabitur porttitor faucibus nisi, eu accumsan dolor porttitor sit amet.",
-            "tags": ["home", "under20"],
-            "link": "https://www.amazon.com/Pllieay-Pieces-Jet-Bouncy-Filler-Children/dp/B074Z8C8RP/ref=sr_1_2?dchild=1&keywords=bouncy+ball&qid=1587748761&sr=8-2",
-            "data": "March 10, 2020"
+            "id": 5,
+            "name": "Boshel Dog Nail Clippers - Stressfree at Home Grooming",
+            "imageFolder": "BoshelDogNailClippers",
+            "displayPhoto": "BoshelNailClippers1.jpg",
+            "article": "In a time of uncertainty many vets and pet groomers are no longer accepting clients unless it is an emergency. That means that many pet owners have had to resort to doing the most dreaded upkeep task: nail trimming. Trimming a pet’s nails can be stressful for both animal and owner. Some of this stress can easily be relieved if the right products are used. \n That is where the Boshel Dog Nail Clippers come in. This model has everything that you could need for at home trimming. It comes equipped with sharp stainless steel blades that are 3.5mm thick. This design allows for a quick cut because it will trim the nail the first time. Getting a pet to stay still for one cut is hard enough. With this product you will never have to endure the battle of cutting the same nail twice in one sitting. If for some reason your dog does end up with sharp edged nails, simply slide the included nail file out from the left side handle for any extra clean up that may be required. \n Now to address the biggest concern: nicking your dog’s quick by cutting too far up the nail. These clippers will bring you peace of mind that your dog will remain safe and unharmed due to the safety stop. With the safety stop, you have more visibility on how far up on the nail you are cutting. Additionally, the handles of these clippers are a comfy, nonslip, ergonomic handle that will stay secure in your hand to prevent any accidental cuts or nicks. \n To top it all off, this product is backed by trainers, vets, and groomers, along with over 10,000 reviews from happy pet owners. Of course, when using this product, or any similar ones, make sure to still proceed with the utmost caution to ensure the safety of you and your pet. This product is recommended mainly for cats as well as medium and large sized dogs.",
+            "tags": [
+                "pets"
+            ],
+            "link": "//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=entertainmyli-20&marketplace=amazon&region=US&placement=B00UJ2WLB0&asins=B00UJ2WLB0&linkId=1ce4250e17146bef9af86b8c7b6f193e&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066C0&bg_color=FFFFFF",
+            "date": "April 25, 2020"
         },
         {
-            "id": 2,
-            "name": "Water Bottle",
-            "imageFolder": "waterBottle",
-            "displayPhoto": "waterBottle1.jpg",
-            "article": "Water Bottle enatis congue nibh porttitor sed. Nam rhoncus, ligula vel elementum facilisis, lectus nunc placerat arcu, quis egestas lacus massa interdum ante. Integer nisl ex, blandit sit amet odio nec, sollicitudin mattis leo. Nullam pretium aliquam metus quis viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per\n inceptos himenaeos. Aliquam facilisis neque non dolor tincidunt, nec elementum metus condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam lobortis erat sed rutrum luctus. Maecenas imperdiet ac neque non venenatis. Aenean aliquet semper purus, eget semper turpis consectetur sed. Nunc sollicitudin sapien lectus, id tempor enim mollis at.\n Donec tincidunt nisl a porta tristique. Curabitur quis eros vehicula, molestie libero vitae, congue eros. Nunc sit amet mi non urna elementum tincidunt. Aliquam vel sem porttitor, ultrices nisi non, placerat massa. Sed tristique felis sed varius laoreet. Nullam ultricies, nulla eget porta ultrices, quam urna hendrerit erat, non ultricies nibh ex vitae ante. Nullam nulla orci, viverra sed urna sed, accumsan scelerisque tortor. Pellentesque aliquet ornare aliquet. Etiam et nunc sit amet mi auctor tincidunt. Aliquam aliquam ornare ligula. Curabitur porttitor faucibus nisi, eu accumsan dolor porttitor sit amet.",
-            "tags": ["office", "under20", "kids"],
-            "link": "https://www.amazon.com/Contigo-2063294-Autoseal-Chill-Bottle/dp/B07P5P5HLW/ref=sr_1_2_sspa?dchild=1&keywords=water+bottle&qid=1587749396&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFXOTNRMTMyUEYyN0smZW5jcnlwdGVkSWQ9QTA0MDI0NDEzSk9RSVNFMFNXNUxaJmVuY3J5cHRlZEFkSWQ9QTAzOTk4MTMxSEtIRlpLUjNSNTdXJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
-            "data": "March 11, 2020"
-        },
-        {
-            "id": 3,
-            "name": "Cool Clock",
-            "imageFolder": "coolClock",
-            "displayPhoto": "coolClock3.jpg",
-            "article": "Cool Clock enatis congue nibh porttitor sed. Nam rhoncus, ligula vel elementum facilisis, lectus nunc placerat arcu, quis egestas lacus massa interdum ante. Integer nisl ex, blandit sit amet odio nec, sollicitudin mattis leo. Nullam pretium aliquam metus quis viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per\n inceptos himenaeos. Aliquam facilisis neque non dolor tincidunt, nec elementum metus condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam lobortis erat sed rutrum luctus. Maecenas imperdiet ac neque non venenatis. Aenean aliquet semper purus, eget semper turpis consectetur sed. Nunc sollicitudin sapien lectus, id tempor enim mollis at.\n Donec tincidunt nisl a porta tristique. Curabitur quis eros vehicula, molestie libero vitae, congue eros. Nunc sit amet mi non urna elementum tincidunt. Aliquam vel sem porttitor, ultrices nisi non, placerat massa. Sed tristique felis sed varius laoreet. Nullam ultricies, nulla eget porta ultrices, quam urna hendrerit erat, non ultricies nibh ex vitae ante. Nullam nulla orci, viverra sed urna sed, accumsan scelerisque tortor. Pellentesque aliquet ornare aliquet. Etiam et nunc sit amet mi auctor tincidunt. Aliquam aliquam ornare ligula. Curabitur porttitor faucibus nisi, eu accumsan dolor porttitor sit amet.",
-            "tags": ["home", "under20", "tech"],
-            "link": "https://www.amazon.com/Contigo-2063294-Autoseal-Chill-Bottle/dp/B07P5P5HLW/ref=sr_1_2_sspa?dchild=1&keywords=water+bottle&qid=1587749396&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFXOTNRMTMyUEYyN0smZW5jcnlwdGVkSWQ9QTA0MDI0NDEzSk9RSVNFMFNXNUxaJmVuY3J5cHRlZEFkSWQ9QTAzOTk4MTMxSEtIRlpLUjNSNTdXJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
-            "data": "March 12, 2020"
-        },
-        {
-            "id": 4,
-            "name": "Headphones",
-            "imageFolder": "headphones",
-            "displayPhoto": "headphones1.jpg",
-            "article": "Headphones enatis congue nibh porttitor sed. Nam rhoncus, ligula vel elementum facilisis, lectus nunc placerat arcu, quis egestas lacus massa interdum ante. Integer nisl ex, blandit sit amet odio nec, sollicitudin mattis leo. Nullam pretium aliquam metus quis viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per\n inceptos himenaeos. Aliquam facilisis neque non dolor tincidunt, nec elementum metus condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam lobortis erat sed rutrum luctus. Maecenas imperdiet ac neque non venenatis. Aenean aliquet semper purus, eget semper turpis consectetur sed. Nunc sollicitudin sapien lectus, id tempor enim mollis at.\n Donec tincidunt nisl a porta tristique. Curabitur quis eros vehicula, molestie libero vitae, congue eros. Nunc sit amet mi non urna elementum tincidunt. Aliquam vel sem porttitor, ultrices nisi non, placerat massa. Sed tristique felis sed varius laoreet. Nullam ultricies, nulla eget porta ultrices, quam urna hendrerit erat, non ultricies nibh ex vitae ante. Nullam nulla orci, viverra sed urna sed, accumsan scelerisque tortor. Pellentesque aliquet ornare aliquet. Etiam et nunc sit amet mi auctor tincidunt. Aliquam aliquam ornare ligula. Curabitur porttitor faucibus nisi, eu accumsan dolor porttitor sit amet.",
-            "tags": ["home", "under20", "tech"],
-            "link": "https://www.amazon.com/Contigo-2063294-Autoseal-Chill-Bottle/dp/B07P5P5HLW/ref=sr_1_2_sspa?dchild=1&keywords=water+bottle&qid=1587749396&sr=8-2-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFXOTNRMTMyUEYyN0smZW5jcnlwdGVkSWQ9QTA0MDI0NDEzSk9RSVNFMFNXNUxaJmVuY3J5cHRlZEFkSWQ9QTAzOTk4MTMxSEtIRlpLUjNSNTdXJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
-            "data": "March 13, 2020"
+            "id": 6,
+            "name": "Waowoo Weighted Blanket - The Perfect Starter Weighted Blanket",
+            "imageFolder": "WaowooWeightedBlanket",
+            "displayPhoto": "WaowooWeightedBlanket1.jpg",
+            "article": "In recent years, the weighted blanket has seen a rise in popularity. Weighted blankets got their start in the 1990s among children. The slight pressure given by the blankets mimics that of a deep touch. While the blankets were originally used to provide comfort to kids and aid in treatment of sensory related disorders, their popularity continues to grow among adults. \n The pressure provided by laying under a weighted blanket releases dopamine and serotonin, which in turn helps to relieve stress. With mental illness numbers on the rise and stressors of life that don’t seem to stop, many adults have turned to weighted blankets to find comfort and relief after a long day. \n Weighted blankets are created by distributing a weighted filling evenly throughout the blanket. Some of these fillings include poly pellets, weighted discs, or glass beads. With the high volume needed to create a weighted sensation, weighted blankets can get very expensive very quickly. That is where the Waowoo Weighted Blanket comes in. At only $40, this weighted blanket is the perfect fit for those who want to try the product but are still on the fence about investing a high amount of money. This blanket is large enough to fit on a queen sized bed and weighs 15 pounds, with options to up the weight and the dimensions of the blanket as the buyer sees fit. With 2, 000+ ratings and 4.5 stars, this product has earned recognition from Amazon to be an Amazon’s Choice item. \n If you have been on the fence about purchasing a weighted blanket, consider this your sign to take the plunge. This is one of the most affordable items of its kind on the market, but the price tag does not mean that it skimps on quality and satisfaction. \n",
+            "tags": [
+                "home"
+            ],
+            "link": " //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=entertainmyli-20&marketplace=amazon&region=US&placement=B07PVLZRHN&asins=B07PVLZRHN&linkId=88a2e9a7477ef8719a092d125a30e339&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff ",
+            "date": "April 25, 2020"
         }
-        
     ]
 }

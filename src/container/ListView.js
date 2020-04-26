@@ -26,10 +26,21 @@ const ListView = props => {
                 id: doc.id,
                 ...doc.data()
             }))
-            setDataToSend(returnData.filter(a => a.tags.includes(pageID)))
 
+            
+            setDataToSend(returnData.filter(a => a.tags.includes(pageID.toLowerCase())))
+
+            if (pageID === 'homepage') {
+                setDataToSend(returnData)
+            }
         })
+
+        window.scrollTo({
+            top: 0,
+            behavior: "auto"
+        });
     }, [pageID])
+
 
 
     // var storageRef = firebase.storage().ref("example");
