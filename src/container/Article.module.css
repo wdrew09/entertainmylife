@@ -3,8 +3,25 @@
     background-color: var(--gray-4); 
     display: flex;
     flex-direction: column;
-    max-width: 1400px;
+    width: auto;
     margin: auto;
+}
+
+.Article {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 0px 20px 0px 20px;
+    height: max-content;
+}
+
+.ArticlePage {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 65% 35%;
 }
 
 .Title {
@@ -17,11 +34,70 @@
     font-family: var(--font);
 }
 
+.Date {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: var(--gray-1);
+    font-weight: 400;
+    font-family: var(--font);
+}
+
 .Content {
     text-align: left;
     margin-left: 20px;
-    font-size: 17px;
+    font-size: 18px;
     color: var(--font-color);
-    font-weight: 600;
+    font-weight: 500;
     font-family: var(--font);
+}
+
+.Image {
+    margin: auto;
+    display: flex;
+    max-width: 650px;
+    max-height: 500px;
+    height: auto;
+    margin-left: 0px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    margin: 15px 0px 15px 0px;
+}
+
+.ImageNotLoaded {
+    margin: auto;
+    display: flex;
+    width: 350px;
+    height: auto;
+    opacity: .1;
+    filter: contrast(50%);
+}
+
+.EachParagraph {
+    margin-left: 30px;
+}
+
+.Sidebar {
+    margin-left: 10%;
+    width: 90%;
+    height: max-content;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+.CheckItOut {
+    width: 150px;
+    border: solid 0px var(--main);
+    background-color: var(--main);
+    border-radius: 5px;
+    height: 50px;
+    font-size: large;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

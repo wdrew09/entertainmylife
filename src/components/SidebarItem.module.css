@@ -1,0 +1,56 @@
+.Main {
+    width: 330px;
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.Main:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Title {
+    margin-top: 5px;
+    font-size: x-large;
+    color: var(--font-color);
+    font-weight: 600;
+    font-family: var(--font);
+    text-decoration: none !important;
+}
+
+.Image {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
+.ImageNotLoaded {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: auto;
+    opacity: .1;
+    filter: contrast(50%);
+}
+
+.CheckItOut {
+    width: 150px;
+    border: solid 0px var(--main);
+    background-color: var(--main);
+    border-radius: 5px;
+    height: 50px;
+    font-size: large;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    margin: auto;
+}
+
+.Bottom {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}

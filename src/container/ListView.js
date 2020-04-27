@@ -4,20 +4,18 @@ import styles from './ListView.module.css';
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Masonry from 'react-masonry-css'
 
 import firebase from '../firebase';
 
 import ListViewItem from '../components/ListViewItem';
 
 
-
 const ListView = props => {
     const {
         pageID
     } = props
-    // let newText = text.split('\n').map((item, i) => {
-    //     return <p key={i}>{item}</p>;
-    // });
+
     const [dataToSend, setDataToSend] = useState()
 
     useEffect(() => {
@@ -27,12 +25,13 @@ const ListView = props => {
                 ...doc.data()
             }))
 
-            
-            setDataToSend(returnData.filter(a => a.tags.includes(pageID.toLowerCase())))
-
             if (pageID === 'homepage') {
-                setDataToSend(returnData)
+                setDataToSend(returnData.sort((a, b) => (a.id < b.id) ? 1 : -1))
+            } else {
+                let tagFilter = returnData.filter(a => a.tags.includes(pageID.toLowerCase()))
+                setDataToSend(tagFilter.sort((a, b) => (a.id < b.id) ? 1 : -1))
             }
+            
         })
 
         window.scrollTo({
@@ -41,39 +40,25 @@ const ListView = props => {
         });
     }, [pageID])
 
-
-
-    // var storageRef = firebase.storage().ref("example");
-
-    // storageRef.listAll().then(function (result) {
-    //     result.items.forEach(function (imageRef) {
-    //         console.log(imageRef.name)
-    //         imageRef.getDownloadURL().then(function (url) {
-    //             // console.log(url)
-    //         })
-    //     });
-    // }).catch(function (error) {
-    //     // Handle any errors
-    // });
-
-
-
-
     return (
         <div className={styles.Main}>
-            <div className={styles.Content}>
+            <Masonry
+                breakpointCols={3}
+                className={styles.MyMasonryGrid}
+                columnClassName={styles.MyMasonryGridColumn}>
                 {dataToSend && dataToSend.length > 0 &&
                     dataToSend.map(data => (
-                        <div key={`DATA_${dataToSend.indexOf(data)}`}>
+                        <div className={styles.EachItem} key={`DATA_${dataToSend.indexOf(data)}`} >
                             < ListViewItem
                                 data={data}
                             />
                         </div>
                     ))
                 }
-            </div>
-        </div>
+            </Masonry>
+        </div >
     )
+
 }
 
 export default ListView

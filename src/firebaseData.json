@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "id": 5,
+            "id": 1,
             "name": "Boshel Dog Nail Clippers - Stressfree at Home Grooming",
             "imageFolder": "BoshelDogNailClippers",
             "displayPhoto": "BoshelNailClippers1.jpg",
@@ -9,11 +9,11 @@
             "tags": [
                 "pets"
             ],
-            "link": "//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=entertainmyli-20&marketplace=amazon&region=US&placement=B00UJ2WLB0&asins=B00UJ2WLB0&linkId=1ce4250e17146bef9af86b8c7b6f193e&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066C0&bg_color=FFFFFF",
+            "link": "https://www.amazon.com/dp/B00UJ2WLB0/ref=as_li_ss_tl?&linkCode=ll1&tag=entertainmyli-20&linkId=c725abf1ef97d9347d5a75b606a13b7f&language=en_US",
             "date": "April 25, 2020"
         },
         {
-            "id": 6,
+            "id": 2,
             "name": "Waowoo Weighted Blanket - The Perfect Starter Weighted Blanket",
             "imageFolder": "WaowooWeightedBlanket",
             "displayPhoto": "WaowooWeightedBlanket1.jpg",
@@ -22,6 +22,44 @@
                 "home"
             ],
             "link": " //ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=entertainmyli-20&marketplace=amazon&region=US&placement=B07PVLZRHN&asins=B07PVLZRHN&linkId=88a2e9a7477ef8719a092d125a30e339&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff ",
+            "date": "April 25, 2020"
+        },
+        {
+            "id": 3,
+            "name": "Handmade Felted Slippers - Support Your Feet and a Small Business",
+            "imageFolder": "HandmadeFeltedSlippers",
+            "displayPhoto": "feltedslippers1.jpg",
+            "article": "With the shift from working at places of business to working at home, it is important to practice self care to keep yourself comfortable at home. When practicing this self care, it is important not to skimp out on your feet. With these hand felted slippers, your feet will stay cozy and happy throughout the day. \n Burebure, the company behind these slippers, is based out of Lithuania. The slippers are created largely in part with wool sheared off the sheep that live on the same farm as the business owners. The sheep are raised in the most natural way possible. They roam freely and are sheared by hand twice a year. From there, the wool is felted by hand using only water and natural olive soap - no harsh chemicals required. \n The labor of love that goes into the making of materials for this product also transfers over to the design. These shoes utilize an envelope design that not only makes feet extremely comfy, but also makes them appear smaller. The clever design coupled with the naturally felted wool makes for the most comfortable slippers you can own. Wool is a natural moisture wicker which means that your feet will stay cool on a warm day, and warm on a cool day, all while the wool prevents sweating and massages the feet. \n With various options for customization including colors and sole material, these slippers will be made to suit you in every way you could imagine. This careful consideration of materials does mean a longer shipping time. In the nature of being environmentally friendly and with the goal of waste reduction, slippers will not be made until an order is placed. The 1-3 week shipping time will all be worth it once you have a pair of comfortable, custom designed slippers on your feet. \n",
+            "tags": [
+                "shopsmall",
+                "gear"
+            ],
+            "link": "https://www.amazon.com/Handmade-Felted-ENVELOPE-Slippers-Europe/dp/B079WTW93Z/ref=as_li_ss_tl?s=handmade&ie=UTF8&qid=1587435529&sr=1-22&linkCode=ll1&tag=entertainmyli-20&linkId=98d0a2effd2b8c8b2c3d8172b00f6c0a&language=en_US",
+            "date": "April 25, 2020"
+        },
+        {
+            "id": 4,
+            "name": "Minecraft Card Game - Fun for the Whole Family",
+            "imageFolder": "MinecraftCardGame",
+            "displayPhoto": "minecraft1.jpg",
+            "article": "Are you tired of your kids spending so much time playing video games? Are you struggling to find a way to ensure they interact with the family while staying engaged? A foolproof way to engage your kids in activities outside of video games is to find a way to bring the concepts behind the games into your family activities. In comes the Minecraft Card Game from Mattel games. \n Minecraft is a popular video game that allows players to mine for materials that they can use to build buildings, objects, and tools. Just like the virtual game, players start the card game by mining for resources such as wood, stone, iron, diamond, or gold. Once the materials have been obtained, players can use a Craft Card to craft for points. You can craft tools to gain special powers to use in your favor as you work towards the game point total. But look out, Creeper Cards and TNT are lurking in the deck to slow you down. \n With the ties of a wildly popular video game, your kids will keep coming back for more. It allows for relationship building among families as they work to understand and engage in the things that each other loves. Even better, the game is still easy to understand for those who are not familiar with the online game play. Combine the simple provided instructions with a kid who is knowledgeable about the game to fill you in on the lingo, this game is sure to provide hours of fun and family bonding. \n",
+            "tags": [
+                "kids"
+            ],
+            "link": "https://www.amazon.com/dp/B0119J9VMI/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=entertainmyli-20&linkId=84b59c7d2b035c48e4fc4d8e8d68e21a&language=en_US",
+            "date": "April 25, 2020"
+        },
+        {
+            "id": 5,
+            "name": "Giant Soccer Ball - Giant Fun",
+            "imageFolder": "GiantSoccerBall",
+            "displayPhoto": "soccerball1.jpg",
+            "article": "With summer and the warm weather associated with it quickly approaching, it may be time to expand your arsenal of outdoor toys. Soccer balls have provided hours of fun for years, but eventually, the novelty may wear off. One way to bring the novelty of a soccer ball back in a new and exciting way is to supersize it. Wicked Big Sports has answered the call to bring that excitement. The company offers a new take on the typically 8.5 inch ball with their inflatable soccer ball that measures in at a whopping 18 inches. \n Your purchase of a Wicked Big Sports soccer ball includes the deflated soccer ball, along with one pump and one needle to inflate the ball. It may appear at first that the needle is not included. That is because it is cleverly and safely stored in the handle of the pump. Make sure after your first inflate that you hold onto the pump after the first inflate, because you may need it again. This is not a product that will pop upon the first spin around the yard. It is made of a soft fabric that adds an extra layer of protection with a mesh outside to protect an airbag on the inside. The soft fabric is great for kids, a bonk from this ball will not spring tears to the eyes! If soccer is not your thing, check out related products to see a giant inflatable volleyball and a giant inflatable football from the same company.",
+            "tags": [
+                "fun",
+                "under20"
+            ],
+            "link": "https://www.amazon.com/dp/B07NR9K983/ref=as_li_ss_tl?th=1&linkCode=ll1&tag=entertainmyli-20&linkId=85ede270fe80968c271c971fcf5c674f&language=en_US",
             "date": "April 25, 2020"
         }
     ]

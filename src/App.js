@@ -16,6 +16,7 @@ import Advertise from './container/Advertise';
 import Disclosure from './container/Disclosure';
 import Disclaimer from './container/Disclaimer';
 import PrivacyPolicy from './container/PrivacyPolicy';
+import PageNotFound from './container/PageNotFound';
 
 import Article from './container/Article';
 
@@ -95,7 +96,7 @@ const App = props => {
           <Route path="/disclaimer/"><Disclaimer/></Route>
           <Route path="/privacypolicy/"><PrivacyPolicy/></Route>
           <Route path="/:name/:id" component={Article}></Route>
-          <Route ><div>404 page not found</div></Route>
+          <Route ><PageNotFound /></Route>
         </Switch>
         <Footer />
       </div>

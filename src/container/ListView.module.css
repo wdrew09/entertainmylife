@@ -7,14 +7,16 @@
     justify-content: center; 
 }
 
-.Content {
+.MyMasonryGrid {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* background-color: yellowgreen; */
-    width: 100%;
-    max-width: 1400px;
-    align-self: center;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
-}
+    margin-left: -60px; 
+    width: auto;
+  }
+.MyMasonryGridColumn {
+    padding-left: 60px; 
+    background-clip: padding-box;
+  }
+   
+.EachItem {
+    margin-bottom: 40px;
+  }

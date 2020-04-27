@@ -29,19 +29,6 @@ const ListViewItem = props => {
                 setDisplayPicture(picture)
             })
 
-        // storageRef.listAll().then(function (result) {
-        //     result.items.forEach(function (imageRef) {
-        //         if (imageRef.name === data.displayPhoto) {
-        //             imageRef.getDownloadURL().then(function (url) {
-        //                 let picture = { name: imageRef.name, url: url }
-        //                 setDisplayPicture(picture)
-        //             })
-        //         }
-        //     });
-        // }).catch(function (error) {
-        //     // Handle any errors
-        // });
-
 
         let i = data.article.split('\n').join('')
         setDisplayString(i.slice(0, 150) + '...')
@@ -58,7 +45,7 @@ const ListViewItem = props => {
     return (
         <div className={styles.Main}>
             {dipslayPicture ?
-                <img className={styles.Image} src={dipslayPicture.url} />
+                <a target="_blank" href={data.link}><img className={styles.Image} src={dipslayPicture.url} /></a>
                 :
                 <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
             }
