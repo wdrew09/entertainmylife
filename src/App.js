@@ -73,29 +73,30 @@ const App = props => {
 
     })
   }, [])
-
+  
 
   let content = (
     <Router>
       <div>
         <Header />
         <Switch>
-          <Route exact path="/"><ListView pageID={'homepage'} /></Route>
-          <Route path="/tech/"><ListView pageID={'tech'} /></Route>
+          {/* <Route path="/homepage:id"><ListView pageID={'homepage'} /></Route> */}
+          <Route exact path="/:pagename/:id" component={ListView}></Route>
+          {/* <Route path="/tech/"><ListView pageID={'tech'} /></Route>
           <Route path="/gear/"><ListView pageID={'gear'} /></Route>
           <Route path="/fun/"><ListView pageID={'fun'} /></Route>
           <Route path="/under20/"><ListView pageID={'under20'} /></Route>
           <Route path="/pets/"><ListView pageID={'pets'} /></Route>
           <Route path="/kids/"><ListView pageID={'kids'} /></Route>
           <Route path="/home/"><ListView pageID={'home'} /></Route>
-          <Route path="/shopsmall/"><ListView pageID={'shopsmall'} /></Route>
+          <Route path="/shopsmall/"><ListView pageID={'shopsmall'} /></Route> */}
           <Route path="/aboutus/"><AboutUs/></Route>
           <Route path="/contactus/"><ContactUs/></Route>
           <Route path="/advertise/"><Advertise/></Route>
           <Route path="/disclosure/"><Disclosure/></Route>
           <Route path="/disclaimer/"><Disclaimer/></Route>
           <Route path="/privacypolicy/"><PrivacyPolicy/></Route>
-          <Route path="/:name/:id" component={Article}></Route>
+          <Route path="/article/:name/:id" component={Article}></Route>
           <Route ><PageNotFound /></Route>
         </Switch>
         <Footer />

@@ -22,9 +22,8 @@
     /* border: solid 1px black; */
     height: 150px;
     /* border-top: solid 2px black; */
-    margin-bottom: 0px;
     align-self: flex-end;
-    margin-bottom: -50px;
+    margin-bottom: -40px;
 }
 
 .SectionButtons {

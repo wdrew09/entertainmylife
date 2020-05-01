@@ -41,7 +41,6 @@ const ListViewItem = props => {
         }
     }
 
-    console.log(dataURL)
     return (
         <div className={styles.Main}>
             {dipslayPicture ?
