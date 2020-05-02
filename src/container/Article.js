@@ -10,6 +10,9 @@ import ListViewItem from '../components/ListViewItem';
 import SidebarItem from '../components/SidebarItem';
 import ListView from './ListView';
 
+import Masonry from 'react-masonry-css'
+
+
 const Article = props => {
 
     const [data, setData] = useState()
@@ -30,21 +33,12 @@ const Article = props => {
             behavior: "auto"
         });
 
-        // if (!props.location.state) {
-            firebase.firestore().collection('products').where("id", "==", parseFloat(props.match.params.id)).onSnapshot((snapshot) => {
-                const returnData = snapshot.docs.map((doc) => ({
-                    ...doc.data()
-                }))
-                setData(...returnData)
-            })
-        // } else {
-        //     setData(props.location.state)
-        // }
-
-
-
-
-
+        firebase.firestore().collection('products').where("id", "==", parseFloat(props.match.params.id)).onSnapshot((snapshot) => {
+            const returnData = snapshot.docs.map((doc) => ({
+                ...doc.data()
+            }))
+            setData(...returnData)
+        })
 
     }, [props.match.params.id])
 
@@ -61,6 +55,20 @@ const Article = props => {
                 })
             })
             let value = data.article.split('\n')
+            let finishedSplit = []
+            value.map(val => {
+                let index = value.indexOf(val)
+                let newVal = val
+                if (val.includes('\b')) {
+                    newVal = val.split('\b')
+                    console.log(newVal)
+                } else {
+                    newVal = [newVal]
+                }
+
+                console.log(newVal.length)
+                value[index] = newVal
+            })
             setSplitArticle(value)
 
             //Getting data for sidebar
@@ -70,7 +78,7 @@ const Article = props => {
                     ...doc.data()
                 }))
 
-                sidebarData.slice(0, 5)
+                sidebarData.slice(0, 15)
                 setSidebarData(sidebarData.filter(a => a.id !== data.id))
             })
         }
@@ -86,48 +94,75 @@ const Article = props => {
         }
     }, [thisPic])
 
-    console.log(data)
+    const cardsPerScreen = () => {
+        if (window.innerWidth < 1000) {
+            return 2
+        } else {
+            return 3
+        }
+    }
 
     return (
         <div className={styles.Main}>
             {data ?
-                <div className={styles.ArticlePage}>
-                    <div className={styles.Article}>
-                        <span className={styles.Title}>{data.name}</span>
-                        <span className={styles.Date}>{data.date}</span>
-                        <span className={styles.Content}>
-                            {splitArticle && splitArticle.map(value => (
-                                <div key={`DATA_${splitArticle.indexOf(value)}`}>
-                                    <span className={styles.EachParagraph}>{value}</span>
-                                    <div>
-                                        {splitArticle.indexOf(value) < splitArticle.length - 1 &&
-                                            (pics[splitArticle.indexOf(value)] ?
+                <div >
+                    <div className={styles.ArticlePage}>
+                        <div className={styles.Article}>
+                            <span className={styles.Title}>{data.name}</span>
+                            <span className={styles.Date}>{data.date}</span>
+                            <span className={styles.Content}>
+                                {splitArticle && splitArticle.map(value => (
+                                    <div key={`DATA_${splitArticle.indexOf(value)}`}>
+                                        <div style={{display: 'flex', flexDirection: 'column'}}>
+                                            {value.map(eachP => (
+                                                <span className={styles.EachParagraph}>{eachP}</span>
+                                            ))}
+                                        </div>
+                                        <div>
+                                            {splitArticle.indexOf(value) < splitArticle.length - 1 &&
+                                                (pics[splitArticle.indexOf(value)] ?
 
-                                                <img className={styles.Image} src={pics[splitArticle.indexOf(value)]} />
-                                                :
-                                                <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
-                                            )
-                                        }
+                                                    <img className={styles.Image} src={pics[splitArticle.indexOf(value)]} />
+                                                    :
+                                                    <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
+                                                )
+                                            }
+                                        </div>
+
                                     </div>
 
-                                </div>
-                                
-                            ))}
-                            <a target="_blank" href={data.link}><button className={styles.CheckItOut}>Check it Out!</button></a>
-                        </span>
+                                ))}
+                                <a target="_blank" href={data.link}><button className={styles.CheckItOut}>Check it Out!</button></a>
+                            </span>
+                        </div>
+                        <div className={styles.Sidebar}>
+                            {sidebarData &&
+                                sidebarData.map(val => (
+                                    sidebarData.indexOf(val) < 6 &&
+                                    <div key={`SIDEBAR_VAL${sidebarData.indexOf(val)}`}>
+                                        <SidebarItem data={val} />
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
-                    <div className={styles.Sidebar}>
-                        {sidebarData &&
-                            sidebarData.map(val => (
-                                <div>
-                                    <SidebarItem data={val} />
-                                </div>
-                            ))
-
-                        }
-
+                    <div className={styles.MasonryDiv}>
+                        <Masonry
+                            breakpointCols={cardsPerScreen()}
+                            className={styles.MyMasonryGrid}
+                            columnClassName={styles.MyMasonryGridColumn}>
+                            {sidebarData && sidebarData.length > 5 &&
+                                sidebarData.map(val => (
+                                    sidebarData.indexOf(val) > 0 &&
+                                    <div className={styles.EachItem} key={`DATA_EACH_ITEM_${sidebarData.indexOf(val)}`} >
+                                        < ListViewItem data={val} />
+                                    </div>
+                                ))
+                            }
+                        </Masonry>
                     </div>
                 </div>
+
                 :
                 <div>
                     <PageNotFound />

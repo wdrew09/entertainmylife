@@ -15,7 +15,8 @@ import Article from '../container/Article';
 
 const ListViewItem = props => {
     const {
-        data
+        data,
+        width
     } = props
 
     const [dipslayPicture, setDisplayPicture] = useState()
@@ -25,9 +26,9 @@ const ListViewItem = props => {
         setDisplayPicture()
         let imageName = firebase.storage().ref(data.imageFolder).child(data.displayPhoto)
         imageName.getDownloadURL().then(function (url) {
-                let picture = { name: imageName.name, url: url }
-                setDisplayPicture(picture)
-            })
+            let picture = { name: imageName.name, url: url }
+            setDisplayPicture(picture)
+        })
 
 
         let i = data.article.split('\n').join('')
@@ -37,16 +38,16 @@ const ListViewItem = props => {
     let dataURL = ''
     if (data) {
         if (data.name) {
-            dataURL = "/" + data.name.replace(/\s/g, '-') + "/" + data.id;
+            dataURL = "/article/" + data.name.replace(/\s/g, '-') + "/" + data.id;
         }
     }
 
     return (
-        <div className={styles.Main}>
+        <div className={styles.Main} style={{width: width}}>
             {dipslayPicture ?
-                <a target="_blank" href={data.link}><img className={styles.Image} src={dipslayPicture.url} /></a>
+                <a target="_blank" href={data.link}><img style={{width: width}} className={styles.Image} src={dipslayPicture.url} /></a>
                 :
-                <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
+                <img style={{width: width}} className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
             }
             <div className={styles.CardContent}>
                 <span className={styles.Title}>{data.name}</span>

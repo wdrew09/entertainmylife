@@ -11,12 +11,14 @@
 }
 
 .Title {
-    margin-top: 5px;
-    font-size: x-large;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
     color: var(--font-color);
-    font-weight: 600;
-    font-family: var(--font);
-    text-decoration: none !important;
+    font-weight: 500;
+    font-family: var(--font);  
 }
 
 .Image {

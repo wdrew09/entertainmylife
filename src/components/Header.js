@@ -3,45 +3,92 @@ import { Route, Switch, Redirect, BrowserRouter as Router, Link, NavLink } from 
 
 import styles from './Header.module.css';
 
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import ListView from '../container/ListView';
+import ReactResizeDetector from 'react-resize-detector';
+import { slide as Menu } from 'react-burger-menu'
 
-import firebase from '../firebase';
 
 const Header = props => {
-    const [newVal, setNewVal] = useState([])
-    const [pic, setpic] = useState()
 
-    // var storage = firebase.storage().ref('example/')
-    // .getDownloadURL().then((url) => {
-    //     setpic(url)
-    // });
-    // console.log(storage)
+    const [pageWidth, setPageWidth] = useState()
+    const [computerStyle, setComputerStyle] = useState(true)
 
+    const changingWidth = (width) => {
+        console.log(width)
+        if (pageWidth != width) {
+            setPageWidth(width)
+            if (width < 1150 && computerStyle != false) {
+                setComputerStyle(false)
+            } else if (width > 1149 && computerStyle != true) {
+                setComputerStyle(true)
+            }
+        }
+    }
 
-
-
-    // var storageRef = firebase.storage().ref("example");
-
-    // storageRef.listAll().then(function(result) {
-    //   result.items.forEach(function(imageRef) {
-    //     imageRef.getDownloadURL().then(function(url) {
-    //         console.log(url)
-    //     })
-    //   });
-    // }).catch(function(error) {
-    //   // Handle any errors
-    // });
+    var menuStyles = {
+        bmBurgerButton: {
+            position: 'fixed',
+            width: '36px',
+            height: '30px',
+            left: '36px',
+            top: '36px',
+        },
+        bmBurgerBars: {
+            background: '#373a47'
+        },
+        bmBurgerBarsHover: {
+            background: '#a90000'
+        },
+        bmCrossButton: {
+            height: '24px',
+            width: '24px'
+        },
+        bmCross: {
+            background: '#bdc3c7'
+        },
+        bmMenuWrap: {
+            position: 'fixed',
+            height: '100%'
+        },
+        bmMenu: {
+            background: '#373a47',
+            padding: '2.5em 1.5em 0',
+            fontSize: '1.15em',
+            marginTop: '-35px'
+        },
+        bmMorphShape: {
+            fill: '#373a47'
+        },
+        bmItemList: {
+            color: '#b8b7ad',
+            padding: '0.8em'
+        },
+        bmItem: {
+            display: 'inline-block'
+        },
+        bmOverlay: {
+            background: 'rgba(0, 0, 0, 0.3)',
+            marginTop: '-35px'
+        }
+    }
 
     return (
         <div>
+            <ReactResizeDetector handleWidth handleHeight onResize={(width, height) => changingWidth(width)} />
             <div className={styles.TopButtons}>
-                <button className={styles.SearchIcon}>
+                {/* <button className={styles.SearchIcon}>
                     <FontAwesomeIcon icon={faSearch} color='black' size='lg' />
-                </button>
+                </button> */}
+
             </div>
+
+            <Menu styles={menuStyles} customBurgerIcon={<FontAwesomeIcon style={{ margin: '10px 0px 0px 10px' }} icon={faBars} color='black' size='1x' />}>
+                <a id="home" className="menu-item" href="/">Home</a>
+                <a id="about" className="menu-item" href="/about">About</a>
+                <a id="contact" className="menu-item" href="/contact">Contact</a>
+            </Menu>
 
             <div className={styles.SectionButtons}>
                 <NavLink activeClassName="active" to="/tech/1"><button className={styles.SectionButtonsButton}>Tech</button></NavLink>

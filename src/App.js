@@ -80,6 +80,7 @@ const App = props => {
       <div>
         <Header />
         <Switch>
+          
           {/* <Route path="/homepage:id"><ListView pageID={'homepage'} /></Route> */}
           <Route exact path="/:pagename/:id" component={ListView}></Route>
           {/* <Route path="/tech/"><ListView pageID={'tech'} /></Route>
@@ -90,13 +91,15 @@ const App = props => {
           <Route path="/kids/"><ListView pageID={'kids'} /></Route>
           <Route path="/home/"><ListView pageID={'home'} /></Route>
           <Route path="/shopsmall/"><ListView pageID={'shopsmall'} /></Route> */}
-          <Route path="/aboutus/"><AboutUs/></Route>
-          <Route path="/contactus/"><ContactUs/></Route>
+          <Route path="/about-us/"><AboutUs/></Route>
+          <Route path="/contact-us/"><ContactUs/></Route>
           <Route path="/advertise/"><Advertise/></Route>
           <Route path="/disclosure/"><Disclosure/></Route>
           <Route path="/disclaimer/"><Disclaimer/></Route>
-          <Route path="/privacypolicy/"><PrivacyPolicy/></Route>
+          <Route path="/privacy-policy/"><PrivacyPolicy/></Route>
           <Route path="/article/:name/:id" component={Article}></Route>
+          <Redirect from="/:pagename" to="/:pagename/1"/>
+          <Redirect from="/" to="/homepage/1"/>
           <Route ><PageNotFound /></Route>
         </Switch>
         <Footer />

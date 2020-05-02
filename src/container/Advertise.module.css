@@ -11,17 +11,20 @@
     text-align: left;
     margin-top: 40px;
     margin-left: 20px;
+    margin-bottom: 20px;
     font-size: 50px;
     color: var(--font-color);
-    font-weight: 600;
+    font-weight: 500;
     font-family: var(--font);
+    
 }
 
 .Content {
     text-align: left;
     margin-left: 20px;
-    font-size: 17px;
+    font-size: 18px;
     color: var(--font-color);
-    font-weight: 600;
+    font-weight: 500;
     font-family: var(--font);
+    max-width: 1000px;
 }

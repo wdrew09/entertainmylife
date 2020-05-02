@@ -52,6 +52,7 @@
     color: var(--font-color);
     font-weight: 500;
     font-family: var(--font);
+    
 }
 
 .Image {
@@ -75,7 +76,11 @@
 }
 
 .EachParagraph {
-    margin-left: 30px;
+    /* margin-left: 30px;
+    margin-top: 15px; */
+    /* padding: 20px; */
+    /* margin-left: 20px; */
+    padding: 10px 5px 10px 0px;
 }
 
 .Sidebar {
@@ -101,3 +106,25 @@
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+.MasonryDiv {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.MyMasonryGrid {
+    display: flex;
+    margin-left: -60px; 
+    width: auto;
+    align-self: center;    
+}
+
+.MyMasonryGridColumn {
+    padding-left: 60px; 
+    background-clip: padding-box;
+  }
+
+  .EachItem {
+    margin-bottom: 40px;
+  }

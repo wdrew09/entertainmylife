@@ -4,7 +4,18 @@ import styles from './PageNotFound.module.css';
 
 const PageNotFound = props => {
 
+    const [showLoading, setShowLoading] = useState(false)
+
     useEffect(() => {
+        let timer1 = setTimeout(() => setShowLoading(true), 1000)
+
+        return () => {
+            clearTimeout(timer1)
+        }
+    }, [])
+
+    useEffect(() => {
+
         window.scrollTo({
             top: 0,
             behavior: "auto"
@@ -13,7 +24,9 @@ const PageNotFound = props => {
 
     return (
         <div className={styles.Main}>
-            <span className={styles.Title}>404 - Page Not Found</span>
+            {showLoading &&
+                <span className={styles.Title}>404 - Page Not Found</span>
+            }
         </div>
     )
 }

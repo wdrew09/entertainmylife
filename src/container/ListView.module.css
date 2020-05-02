@@ -25,6 +25,11 @@
     margin-bottom: 40px;
   }
 
+  .Footer {
+      margin: auto;
+      padding: 20px;
+  }
+
 .PaginationButton {
     font-size: 15px;
     font-family: var(--font);
@@ -33,26 +38,37 @@
     width: 34px;
     color: var(--main);
     background-color: white;
-    border: 1px solid var(--main);
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
     cursor: pointer;
   }
 
   .PaginationButton:hover {
-    filter: brightness(115%);
+    filter: brightness(105%);
+  }
+
+  .PaginationButton:focus {
+    outline: none;
   }
 
   .PaginationButtonSelected {
     font-size: 15px;
     font-family: var(--font);
     font-weight: 700;
-    height: 36px;
-    width: 36px;
+    height: 34px;
+    width: 34px;
     color: white;
     background-color: var(--main);
-    border: 1px solid white;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: var(--main);
     cursor: pointer;
   }
 
   .PaginationButtonSelected:hover {
     filter: brightness(115%);
+  }
+
+  .PaginationButtonSelected:focus {
+    outline: none;
   }

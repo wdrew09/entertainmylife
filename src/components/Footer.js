@@ -23,28 +23,28 @@ const Header = props => {
             <div className={styles.Links}>
                 <div className={styles.FirstHalf}>
                     <div>
-                        <NavLink activeClassName="active" to="/tech/"><button className={styles.SectionButtonsButton}>Tech</button></NavLink>
-                        <NavLink activeClassName="active" to="/gear/"><button className={styles.SectionButtonsButton}>Gear</button></NavLink>
-                        <NavLink activeClassName="active" to="/fun/"><button className={styles.SectionButtonsButton}>Fun</button></NavLink>
-                        <NavLink activeClassName="active" to="/under20/"><button className={styles.SectionButtonsButton}>Under 20</button></NavLink>
+                        <NavLink activeClassName="active" to="/tech/1"><button className={styles.SectionButtonsButton}>Tech</button></NavLink>
+                        <NavLink activeClassName="active" to="/gear/1"><button className={styles.SectionButtonsButton}>Gear</button></NavLink>
+                        <NavLink activeClassName="active" to="/fun/1"><button className={styles.SectionButtonsButton}>Fun</button></NavLink>
+                        <NavLink activeClassName="active" to="/under20/1"><button className={styles.SectionButtonsButton}>Under 20</button></NavLink>
                     </div>
                     <div>
-                        <NavLink activeClassName="active" to="/pets/"><button className={styles.SectionButtonsButton}>Pets</button></NavLink>
-                        <NavLink activeClassName="active" to="/kids/"><button className={styles.SectionButtonsButton}>Kids</button></NavLink>
-                        <NavLink activeClassName="active" to="/home/"><button className={styles.SectionButtonsButton}>Home</button></NavLink>
-                        <NavLink activeClassName="active" to="/shopsmall/"><button className={styles.SectionButtonsButton}>Shop Small</button></NavLink>
+                        <NavLink activeClassName="active" to="/pets/1"><button className={styles.SectionButtonsButton}>Pets</button></NavLink>
+                        <NavLink activeClassName="active" to="/kids/1"><button className={styles.SectionButtonsButton}>Kids</button></NavLink>
+                        <NavLink activeClassName="active" to="/home/1"><button className={styles.SectionButtonsButton}>Home</button></NavLink>
+                        <NavLink activeClassName="active" to="/shopsmall/1"><button className={styles.SectionButtonsButton}>Shop Small</button></NavLink>
                     </div>
                 </div>
                 <div className={styles.SecondHalf}>
                     <div>
-                        <NavLink activeClassName="active" to="/aboutus/"><button className={styles.SectionButtonsButton}>About Us</button></NavLink>
-                        <NavLink activeClassName="active" to="/contactus/"><button className={styles.SectionButtonsButton}>Contact Us</button></NavLink>
+                        <NavLink activeClassName="active" to="/about-us/"><button className={styles.SectionButtonsButton}>About Us</button></NavLink>
+                        <NavLink activeClassName="active" to="/contact-us/"><button className={styles.SectionButtonsButton}>Contact Us</button></NavLink>
                         <NavLink activeClassName="active" to="/advertise/"><button className={styles.SectionButtonsButton}>Advertise</button></NavLink>
                     </div>
                     <div>
                         <NavLink activeClassName="active" to="/disclosure/"><button className={styles.SectionButtonsButton}>Disclosure</button></NavLink>
                         <NavLink activeClassName="active" to="/disclaimer/"><button className={styles.SectionButtonsButton}>Disclaimer</button></NavLink>
-                        <NavLink activeClassName="active" to="/privacypolicy/"><button className={styles.SectionButtonsButton}>Privacy Policy</button></NavLink>
+                        <NavLink activeClassName="active" to="/privacy-policy/"><button className={styles.SectionButtonsButton}>Privacy Policy</button></NavLink>
                     </div>
                 </div>
             </div>

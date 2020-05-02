@@ -26,7 +26,7 @@ const SidebarItem = props => {
     let dataURL = ''
     if (data) {
         if (data.name) {
-            dataURL = "/" + data.name.replace(/\s/g, '-') + "/" + data.id;
+            dataURL = "/article/" + data.name.replace(/\s/g, '-') + "/" + data.id;
         }
     }
 

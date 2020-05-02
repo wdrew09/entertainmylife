@@ -1,11 +1,9 @@
 .Main {
     height: max-content;
-    width: 350px;
     border: solid 1px var(--gray-2);
     background-color: white;
     margin-top: 30px;
     text-align: left;
-    /* padding: 10px 10px 10px 10px; */
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
@@ -15,30 +13,30 @@
 }
 
 .Title {
-    margin-top: 5px;
-    font-size: x-large;
+    margin-top: 8px;
+    font-size: 26px;
     color: var(--font-color);
-    font-weight: 600;
-    font-family: var(--font)
+    font-weight: 500;
+    font-family: var(--font);  
 }
 
 .String {
     margin-top: 8px;
-    font-family: var(--font);
+    font-size: 16px;
     color: var(--font-color);
+    font-weight: 500;
+    font-family: var(--font);  
 }
 
 .Image {
     margin: auto;
     display: flex;
-    width: 350px;
     height: auto;
 }
 
 .ImageNotLoaded {
     margin: auto;
     display: flex;
-    width: 350px;
     height: auto;
     opacity: .1;
     filter: contrast(50%);
@@ -85,6 +83,8 @@
     font-weight: 700;
     cursor: pointer;
     margin-left: 75px;
+
+    
 }
 
 .CheckItOut:hover {
