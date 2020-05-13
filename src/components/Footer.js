@@ -62,7 +62,7 @@ const Footer = props => {
                         </div>
                     </div>
                     <div className={styles.BackToTop}>
-                        <button onClick={() => scrollToTop()}><FontAwesomeIcon icon={faArrowCircleUp} color='white' size='2x' /></button>
+                        <button style={{zIndex: '100'}} onClick={() => scrollToTop()}><FontAwesomeIcon icon={faArrowCircleUp} color='white' size='2x' /></button>
                         <span>Back to the Top!</span>
                         <ReactResizeDetector handleWidth handleHeight onResize={(width, height) => changingWidth(width)} />
                     </div>
