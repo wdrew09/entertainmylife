@@ -8,13 +8,6 @@ import ImageUploading from "react-images-uploading";
 
 const Submit = props => {
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: "auto"
-        });
-    }, [])
-
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -35,6 +28,11 @@ const Submit = props => {
     const [articleCursorPosition, setArticleCursorPosition] = useState(0)
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "auto"
+        });
+
         setFirebaseData()
         firebase.auth().signOut()
     }, [])
@@ -249,15 +247,15 @@ const Submit = props => {
                     <input value={date} placeholder={"May 15th, 2020"} onChange={(e) => setDate(e.target.value)}></input>
                     {submitErrorMessage != 'success' ?
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <button style={{ width: '100px', margin: 'auto', marginTop: '20px' }} onClick={() => submitClicked()}>submit</button>
+                            <button className={styles.SubmitButton} style={{ width: '100px', margin: 'auto', marginTop: '20px' }} onClick={() => submitClicked()}>Submit</button>
                             <span>{submitErrorMessage}</span>
-                            <button style={{ width: '100px', margin: 'auto', marginTop: '100px', backgroundColor: 'red' }} onClick={() => logoutClicked()}>logout</button>
+                            <button style={{ width: '100px', margin: 'auto', marginTop: '100px', backgroundColor: 'red', color: 'white' }} onClick={() => logoutClicked()}>logout</button>
                         </div>
                         :
                         <div style={{ display: 'flex', margin: 'auto', marginTop: '20px' }}>
-                            <button style={{ width: '100px', margin: 'auto', marginTop: '20px' }} onClick={() => addAnotherClicked()}>create another</button>
+                            <button className={styles.SubmitButton} style={{ width: '100px', margin: 'auto', marginTop: '20px' }} onClick={() => addAnotherClicked()}>create another</button>
                             <span>{submitErrorMessage}</span>
-                            <button style={{ width: '100px', margin: 'auto', marginTop: '100px', backgroundColor: 'red' }} onClick={() => logoutClicked()}>logout</button>
+                            <button style={{ width: '100px', margin: 'auto', marginTop: '100px', backgroundColor: 'red', color: 'white' }} onClick={() => logoutClicked()}>logout</button>
                         </div>
                     }
 
