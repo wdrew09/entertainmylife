@@ -54,13 +54,13 @@ const Article = props => {
                     }
                 })
             })
-            let value = data.article.split('\n')
+            let value = data.article.split('(add picture)')
             let finishedSplit = []
             value.map(val => {
                 let index = value.indexOf(val)
                 let newVal = val
-                if (val.includes('\b')) {
-                    newVal = val.split('\b')
+                if (val.includes('(add paragraph)')) {
+                    newVal = val.split('(add paragraph)')
                     console.log(newVal)
                 } else {
                     newVal = [newVal]
@@ -102,6 +102,9 @@ const Article = props => {
         }
     }
 
+    if (data) {
+        console.log(data.link)
+    }
     return (
         <div className={styles.Main}>
             {data ?

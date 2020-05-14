@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/firebase-storage'
+import 'firebase/auth'
 
 var firebaseConfig = {
     apiKey: "AIzaSyCBeBmU8XvO7QckDyoUCAJSGpTzAO4l24Y",

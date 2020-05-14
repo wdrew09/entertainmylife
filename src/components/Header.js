@@ -103,7 +103,7 @@ const Header = props => {
                     </div>
                     <div className={styles.SectionButtons}>
 
-                        <NavLink activeClassName="active" to="/tech/1"><button className={styles.SectionButtonsButton}>Tech</button></NavLink>
+                        <NavLink activeClassName="active" to="/tech/1"><button className={styles.SectionButtonsButton}>Techs</button></NavLink>
                         <NavLink activeClassName="active" to="/under20/1"><button className={styles.SectionButtonsButton}>Under 20</button></NavLink>
                         <NavLink activeClassName="active" to="/fun/1"><button className={styles.SectionButtonsButton}>Fun</button></NavLink>
                         <NavLink activeClassName="active" to="/gear/1"><button className={styles.SectionButtonsButton}>Gear</button></NavLink>

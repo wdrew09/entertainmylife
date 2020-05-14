@@ -1,0 +1,75 @@
+.Login {
+    padding: 100px 0px 500px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Login input {
+    margin: auto;
+    margin-top: 15px;
+    width: 300px;
+    height: 30px;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Login button {
+    width: 150px;
+    height: 40px;
+    background-color: var(--light-blue);
+    color: white;
+    margin: auto;
+    margin-top: 15px;
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.Login button:hover {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Submit {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px 300px 0px;
+}
+
+.Submit input {
+    margin: auto;
+    margin-top: 15px;
+    width: 300px;
+    height: 30px;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Submit textarea {
+    margin: auto;
+    margin-top: 5px;
+    width: 600px;
+    height: 400px;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.Submit select {
+    margin: auto;
+    margin-top: 15px;
+    width: 300px;
+    height: 30px;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#uploader {
+    appearance: none;
+}

@@ -17,8 +17,8 @@ import Disclosure from './container/Disclosure';
 import Disclaimer from './container/Disclaimer';
 import PrivacyPolicy from './container/PrivacyPolicy';
 import PageNotFound from './container/PageNotFound';
-
 import Article from './container/Article';
+import Submit from './container/Submit';
 
 // import NotFound from 
 
@@ -80,17 +80,7 @@ const App = props => {
       <div>
         <Header />
         <Switch>
-          
-          {/* <Route path="/homepage:id"><ListView pageID={'homepage'} /></Route> */}
           <Route exact path="/:pagename/:id" component={ListView}></Route>
-          {/* <Route path="/tech/"><ListView pageID={'tech'} /></Route>
-          <Route path="/gear/"><ListView pageID={'gear'} /></Route>
-          <Route path="/fun/"><ListView pageID={'fun'} /></Route>
-          <Route path="/under20/"><ListView pageID={'under20'} /></Route>
-          <Route path="/pets/"><ListView pageID={'pets'} /></Route>
-          <Route path="/kids/"><ListView pageID={'kids'} /></Route>
-          <Route path="/home/"><ListView pageID={'home'} /></Route>
-          <Route path="/shopsmall/"><ListView pageID={'shopsmall'} /></Route> */}
           <Route path="/about-us/"><AboutUs/></Route>
           <Route path="/contact-us/"><ContactUs/></Route>
           <Route path="/advertise/"><Advertise/></Route>
@@ -98,6 +88,7 @@ const App = props => {
           <Route path="/disclaimer/"><Disclaimer/></Route>
           <Route path="/privacy-policy/"><PrivacyPolicy/></Route>
           <Route path="/article/:name/:id" component={Article}></Route>
+          <Route path="/submit" component={Submit}></Route>
           <Redirect from="/:pagename" to="/:pagename/1"/>
           <Redirect from="/" to="/homepage/1"/>
           <Route ><PageNotFound /></Route>
