@@ -44,16 +44,17 @@ const Submit = props => {
             })
         })
 
+        let tempHighId = 0
         firebase.firestore().collection('products').onSnapshot((snapshot) => {
             snapshot.docs.map((doc) => {
                 setFirestoreNames([...firestoreNames, doc.data().name])
-                if (doc.data().id > highestID) {
-                    setHighestID(doc.data().id)
+                // console.log(doc.data().name, doc.data().id)
+                if (doc.data().id > tempHighId) {
+                    tempHighId = doc.data().id
                 }
             })
+            setHighestID(tempHighId)
         })
-
-
     }
 
     const auth = firebase.auth()
@@ -201,6 +202,8 @@ const Submit = props => {
             date: date
         })
     }
+
+    console.log(highestID)
 
     return (
         <div className={styles.Main}>

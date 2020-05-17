@@ -24,7 +24,8 @@ const ListViewItem = props => {
         })
 
 
-        let i = data.article.split('\n').join('')
+        let i = data.article.split("(add picture)").join('')
+        i = i.split("(add paragraph)").join('')
         setDisplayString(i.slice(0, 150) + '...')
     }, [data.id])
 
