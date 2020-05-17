@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './Disclosure.module.css';
 import { NavLink } from 'react-router-dom';

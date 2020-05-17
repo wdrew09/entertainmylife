@@ -52,6 +52,8 @@ const Submit = props => {
                 }
             })
         })
+
+
     }
 
     const auth = firebase.auth()
@@ -119,7 +121,7 @@ const Submit = props => {
         }
         let articlePicCount = article.split('(add picture)').length - 1
         let picCount = images.length - 1
-        if (articlePicCount != picCount) {
+        if (articlePicCount !== picCount) {
             setSubmitErrorMessage('pics added minus the display pic is not the same as pics used in article')
             return false
         }
@@ -186,6 +188,18 @@ const Submit = props => {
             let storageRef = firebase.storage().ref(imageFolderName + '/' + image.file.name)
             storageRef.put(image.file)
         })
+
+        let ref = firebase.database().ref('/' + prodName)
+        ref.set({
+            id: highestID + 1,
+            name: prodName,
+            imageFolder: imageFolderName,
+            displayPhoto: images[0].file.name,
+            article: article.toString(),
+            tags: tags,
+            link: link,
+            date: date
+        })
     }
 
     return (
@@ -245,7 +259,7 @@ const Submit = props => {
                     <button style={{ width: '100px', backgroundColor: 'red', margin: 'auto', color: 'white' }} onClick={() => setTags([])}>clear all tags</button>
                     <input value={link} placeholder={"Link"} onChange={(e) => setLink(e.target.value)}></input>
                     <input value={date} placeholder={"May 15th, 2020"} onChange={(e) => setDate(e.target.value)}></input>
-                    {submitErrorMessage != 'success' ?
+                    {submitErrorMessage !== 'success' ?
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                             <button className={styles.SubmitButton} style={{ width: '100px', margin: 'auto', marginTop: '20px' }} onClick={() => submitClicked()}>Submit</button>
                             <span>{submitErrorMessage}</span>

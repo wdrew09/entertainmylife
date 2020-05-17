@@ -108,23 +108,41 @@
 }
 
 .MasonryDiv {
-    max-width: 1200px;
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    background-color: var(--gray-4); 
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
     margin: auto;
-    margin-top: 100px;
 }
 
 .MyMasonryGrid {
     display: flex;
     margin-left: -60px; 
     width: auto;
-    align-self: center;    
+    align-self: center;  
 }
 
 .MyMasonryGridColumn {
     padding-left: 60px; 
     background-clip: padding-box;
-  }
+}
 
-  .EachItem {
+.EachItem {
     margin-bottom: 40px;
-  }
+}
+
+.Tags {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100px;
+  flex-wrap: wrap;
+  margin: 20px 20px 20px 0px;
+  border-color: var(--gray-1);
+  border-radius: 3px;
+}
+

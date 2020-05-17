@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, Redirect, BrowserRouter as Router, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 import styles from './ListViewItem.module.css';
 
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import firebase from '../firebase';
-
-import Article from '../container/Article';
-
-
 
 const ListViewItem = props => {
     const {

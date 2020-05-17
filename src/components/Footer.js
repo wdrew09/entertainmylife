@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, Redirect, BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Footer.module.css';
 
@@ -17,7 +17,7 @@ const Footer = props => {
     }, [])
 
     const changingWidth = (width) => {
-        if (pageWidth != width) {
+        if (pageWidth !==width) {
             setPageWidth(width)
         }
     }

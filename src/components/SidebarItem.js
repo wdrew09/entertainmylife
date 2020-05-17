@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, Redirect, BrowserRouter as Router, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './SidebarItem.module.css';
-
-
 
 import firebase from '../firebase';
 

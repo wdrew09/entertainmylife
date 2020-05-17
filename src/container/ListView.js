@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import styles from './ListView.module.css';
-import { Route, Switch, Redirect, BrowserRouter as Router, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -69,7 +69,7 @@ const ListView = props => {
                     let tagFilter = returnData.filter(a => a.tags.includes(pageName.toLowerCase()))
                     let list = tagFilter.sort((a, b) => (a.id < b.id) ? 1 : -1)
                     setDataList(list)
-                    setPageCount(list.length / cardsPerPage)
+                    setPageCount(Math.ceil(list.length / cardsPerPage))
                     settingSendData(1, list)
                 }
 
@@ -100,20 +100,20 @@ const ListView = props => {
     }
 
     const changingWidth = (width) => {
-        if (pageWidth != width) {
+        if (pageWidth !== width) {
             setPageWidth(width)
             if (pageWidth > 1250 && cardsPerRow != 3) {
-                if (cardsPerRow != 3) {
+                if (cardsPerRow !== 3) {
                     setCardsPerRow(3)
                 }
-            } else if (pageWidth > 850 && pageWidth < 1251 && cardsPerRow != 2) {
-                if (cardsPerRow != 2) {
+            } else if (pageWidth > 850 && pageWidth < 1251 && cardsPerRow !== 2) {
+                if (cardsPerRow !== 2) {
                     setCardsPerRow(2)
                 }
             }
-            else if (pageWidth < 400 && pageWidth > 319 && cardWidth != 300) {
+            else if (pageWidth < 400 && pageWidth > 319 && cardWidth !== 300) {
                 setCardWidth(300)
-            } else if (pageWidth < 320 && cardWidth != 250) {
+            } else if (pageWidth < 320 && cardWidth !== 250) {
                 setCardWidth(250)
             }
             else {
@@ -124,14 +124,45 @@ const ListView = props => {
         }
     }
 
-    return (
+    const cardsPerRowFunc = () => {
+        let width = window.innerWidth
+        if (width > 1250) {
+            if (cardWidth !== '350px') {
+                setCardWidth('350px')
+            }
+            return 3
+        } else if (width < 1251 && width > 850) {
+            if (cardWidth !== '350px') {
+                setCardWidth('350px')
+            }
+            return 2
+        } else if (width > 650 && width < 851) {
+            if (cardWidth !== '275px') {
+                setCardWidth('275px')
+            }
+            return 2
+        } else if (width > 399 && width < 651) {
+            if (cardWidth !== '350px') {
+                setCardWidth('350px')
+            }
+            return 1
+        } else if (width < 400 && width > 319) {
+            if (cardWidth !== '300px') {
+                setCardWidth('300px')
+            }
+            return 1
+        }
+    }
 
+    console.log(cardWidth)
+    return (
         <div className={styles.Main}>
             {pageList.includes(pageName) ?
                 <div className={styles.Main}>
                     <ReactResizeDetector handleWidth handleHeight onResize={(width, height) => changingWidth(width)} />
                     <Masonry
-                        breakpointCols={cardsPerRow}
+                        // breakpointCols={cardsPerRow}
+                        breakpointCols={cardsPerRowFunc()}
                         className={styles.MyMasonryGrid}
                         columnClassName={styles.MyMasonryGridColumn}>
                         {dataToSend && dataToSend.length > 0 &&
@@ -146,7 +177,7 @@ const ListView = props => {
                         }
                     </Masonry>
                     <div className={styles.Footer}>
-                        {activePage != 1 ?
+                        {activePage !== 1 ?
                             <NavLink activeClassName="active" to={`/${pageName}/${Number(activePage) - 1}`} ><button style={{ borderWidth: '1px' }} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleLeft} color='var(--main)' size="xs" /></button></NavLink>
                             :
                             <button style={{ borderWidth: '1px' }} disabled={true} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleLeft} color='var(--main)' size="xs" /></button>
@@ -161,9 +192,9 @@ const ListView = props => {
                         {(activePage + 2 < pageCount) && <NavLink activeClassName="active" to={`/${pageName}/${Number(activePage) + 2}`} ><button className={styles.PaginationButton}>{`${Number(activePage) + 2}`}</button></NavLink>}
 
                         {activePage + 3 < pageCount && <button className={styles.PaginationButton}>...</button>}
-                        {(pageCount != 1 && activePage < pageCount) && <NavLink activeClassName="active" to={`/${pageName}/${pageCount}`} ><button className={styles.PaginationButton}>{pageCount}</button></NavLink>}
+                        {(pageCount !== 1 && activePage < pageCount) && <NavLink activeClassName="active" to={`/${pageName}/${pageCount}`} ><button className={styles.PaginationButton}>{pageCount}</button></NavLink>}
 
-                        {activePage != pageCount ?
+                        {activePage !== pageCount ?
                             <NavLink activeClassName="active" to={`/${pageName}/${activePage + 1}`} ><button className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleRight} color='var(--main)' size="xs" /></button></NavLink>
                             :
                             <button disabled={true} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleRight} color='var(--main)' size="xs" /></button>
