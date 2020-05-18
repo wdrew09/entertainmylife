@@ -32,9 +32,9 @@ const SidebarItem = props => {
         <NavLink to={{ pathname: dataURL, state: data }}>
             <div className={styles.Main}>
                 {dipslayPicture ?
-                    <img className={styles.Image} src={dipslayPicture.url} />
+                    <img className={styles.Image} src={dipslayPicture.url} alt={data.name}/>
                     :
-                    <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
+                    <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} alt={"Logo"}/>
                 }
                 <hr style={{ width: '80%', backgroundColor: 'transparent', height: '0px', border: 'solid 1px var(--gray-2)', borderWidth: '1px 0px 0px 0px' }} />
                 <div className={styles.Bottom}>

@@ -39,7 +39,7 @@
   border-width: 0px;
   /* border-bottom: solid 1px black; */
   background-color: white;
-  padding: 18px 0px;
+  /* padding: 18px 0px; */
   margin: 0px 10px 0px 10px;
   display: inline-block;
   font-family: var(--font);
@@ -50,6 +50,12 @@
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   }
+
+  .SectionButtonsButton h2 {
+    font-family: var(--font);
+    font-size: 19px;
+    font-weight: 600;
+    }
 
   .SectionButtonsButton:hover {
     box-shadow: inset 0px -100px 0px 0px var(--main);

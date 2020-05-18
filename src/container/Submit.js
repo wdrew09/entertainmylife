@@ -247,6 +247,7 @@ const Submit = props => {
                         <div style={{ marginLeft: '0px', display: 'flex', flexDirection: 'column', marginTop: '100px' }}>
                             <button onClick={() => addArticleValue('(add paragraph)')}>add paragraph</button>
                             <button onClick={() => addArticleValue('(add picture)')} style={{ marginTop: '10px' }}>add picture</button>
+                            <span style={{marginTop: '10px'}}>character count: {article.length}</span>
                         </div>
                     </div>
                     <select onChange={(e) => addedTag(e.target.value)}>
@@ -269,8 +270,8 @@ const Submit = props => {
                             <button style={{ width: '100px', margin: 'auto', marginTop: '100px', backgroundColor: 'red', color: 'white' }} onClick={() => logoutClicked()}>logout</button>
                         </div>
                         :
-                        <div style={{ display: 'flex', margin: 'auto', marginTop: '20px' }}>
-                            <button className={styles.SubmitButton} style={{ width: '100px', margin: 'auto', marginTop: '20px' }} onClick={() => addAnotherClicked()}>create another</button>
+                        <div style={{ display: 'flex', margin: 'auto', marginTop: '20px', flexDirection: 'column' }}>
+                            <button className={styles.SubmitButton} style={{ width: '200px', margin: 'auto', marginTop: '20px' }} onClick={() => addAnotherClicked()}>create another</button>
                             <span>{submitErrorMessage}</span>
                             <button style={{ width: '100px', margin: 'auto', marginTop: '100px', backgroundColor: 'red', color: 'white' }} onClick={() => logoutClicked()}>logout</button>
                         </div>

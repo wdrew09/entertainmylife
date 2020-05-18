@@ -195,9 +195,9 @@ const Article = props => {
                                             {splitArticle.indexOf(value) < splitArticle.length - 1 &&
                                                 (pics[splitArticle.indexOf(value)] ?
 
-                                                    <img className={styles.Image} src={pics[splitArticle.indexOf(value)]} />
+                                                    <img className={styles.Image} src={pics[splitArticle.indexOf(value)]} alt={"Product Image"}/>
                                                     :
-                                                    <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
+                                                    <img className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} alt={"Logo"}/>
                                                 )
                                             }
                                         </div>

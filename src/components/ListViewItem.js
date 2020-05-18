@@ -39,13 +39,13 @@ const ListViewItem = props => {
     return (
         <div className={styles.Main} style={{ width: width }}>
             {dipslayPicture ?
-                <a target="_blank" href={data.link}><img style={{ width: width }} className={styles.Image} src={dipslayPicture.url} /></a>
+                <a target="_blank" href={data.link}><img style={{ width: width }} className={styles.Image} src={dipslayPicture.url} alt={data.name}/></a>
                 :
-                <img style={{ width: width }} className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} />
+                <img style={{ width: width }} className={styles.ImageNotLoaded} src={"/EntertainMyLife1.jpg"} alt={"Logo"}/>
             }
             <div className={styles.CardContent}>
-                <span className={styles.Title}>{data.name}</span>
-                <span className={styles.String}>{displayString}</span>
+                <h2 className={styles.Title}>{data.name}</h2>
+                <h4 className={styles.String}>{displayString}</h4>
                 <hr style={{ width: '300px', backgroundColor: 'transparent', height: '0px', border: 'solid 1px var(--gray-2)', borderWidth: '1px 0px 0px 0px' }} />
                 {data.article.length > 400 ?
                     <NavLink to={{ pathname: dataURL, state: data }}>

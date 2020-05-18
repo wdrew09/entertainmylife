@@ -18,10 +18,11 @@
     color: var(--font-color);
     font-weight: 500;
     font-family: var(--font);  
+    margin-bottom: 0px;
 }
 
 .String {
-    margin-top: 8px;
+    margin-top: 4px;
     font-size: 16px;
     color: var(--font-color);
     font-weight: 500;
@@ -83,8 +84,6 @@
     font-weight: 700;
     cursor: pointer;
     margin-left: 75px;
-
-    
 }
 
 .CheckItOut:hover {

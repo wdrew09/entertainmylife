@@ -103,17 +103,17 @@ const Header = props => {
                     </div>
                     <div className={styles.SectionButtons}>
 
-                        <NavLink activeClassName="active" to="/tech/1"><button className={styles.SectionButtonsButton}>Techs</button></NavLink>
-                        <NavLink activeClassName="active" to="/under20/1"><button className={styles.SectionButtonsButton}>Under 20</button></NavLink>
-                        <NavLink activeClassName="active" to="/fun/1"><button className={styles.SectionButtonsButton}>Fun</button></NavLink>
-                        <NavLink activeClassName="active" to="/gear/1"><button className={styles.SectionButtonsButton}>Gear</button></NavLink>
+                        <NavLink activeClassName="active" to="/tech/1"><button className={styles.SectionButtonsButton}><h2>Tech</h2></button></NavLink>
+                        <NavLink activeClassName="active" to="/under20/1"><button className={styles.SectionButtonsButton}><h2>Under 20</h2></button></NavLink>
+                        <NavLink activeClassName="active" to="/fun/1"><button className={styles.SectionButtonsButton}><h2>Fun</h2></button></NavLink>
+                        <NavLink activeClassName="active" to="/gear/1"><button className={styles.SectionButtonsButton}><h2>Gear</h2></button></NavLink>
 
                         <NavLink exact activeClassName="active" to="/homepage/1"><img className={styles.LogoImage} src={"/Entertain_My_Life_01.png"} alt={"Logo"}/></NavLink>
 
-                        <NavLink activeClassName="active" to="/pets/1"><button className={styles.SectionButtonsButton}>Pets</button></NavLink>
-                        <NavLink activeClassName="active" to="/kids/1"><button className={styles.SectionButtonsButton}>Kids</button></NavLink>
-                        <NavLink activeClassName="active" to="/home/1"><button className={styles.SectionButtonsButton}>Home</button></NavLink>
-                        <NavLink activeClassName="active" to="/shopsmall/1"><button className={styles.SectionButtonsButton}>Shop Small</button></NavLink>
+                        <NavLink activeClassName="active" to="/pets/1"><button className={styles.SectionButtonsButton}><h2>Pets</h2></button></NavLink>
+                        <NavLink activeClassName="active" to="/kids/1"><button className={styles.SectionButtonsButton}><h2>Kids</h2></button></NavLink>
+                        <NavLink activeClassName="active" to="/home/1"><button className={styles.SectionButtonsButton}><h2>Home</h2></button></NavLink>
+                        <NavLink activeClassName="active" to="/shopsmall/1"><button className={styles.SectionButtonsButton}><h2>Shop Small</h2></button></NavLink>
                     </div>
                 </div>
             }
