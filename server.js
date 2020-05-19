@@ -7,9 +7,18 @@ app.use(favicon(__dirname + '/build/favicon.ico'));
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
-app.get('/ping', function (req, res) {
- return res.send('pong');
+
+
+app.use(function forceLiveDomain(req, res, next) {
+  // Don't allow user to hit Heroku now that we have a domain
+  var host = req.get('Host');
+  if (host === 'entertainmylife.com') {
+    return res.redirect(301, 'https://www.entertainmylife.com/' + req.originalUrl);
+  }
+  return next();
 });
+
+
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
