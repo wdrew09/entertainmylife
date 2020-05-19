@@ -12,7 +12,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(function forceLiveDomain(req, res, next) {
   // Don't allow user to hit Heroku now that we have a domain
   var host = req.get('Host');
-  if (host === 'entertainmylife.com') {
+  console.log(host)
+  if (host === 'entertainmylife.com' || host === 'http://entertainmylife.com' || host === 'http://www.entertainmylife.com' || 'https://entertainmylife.com') {
     return res.redirect(301, 'https://www.entertainmylife.com/' + req.originalUrl);
   }
   return next();
