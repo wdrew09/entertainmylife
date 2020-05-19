@@ -7,7 +7,7 @@ app.use(favicon(__dirname + '/build/favicon.ico'));
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
-res.redirect(301, 'https://www.entertainmylife.com/' + req.originalUrl);
+res.redirect(301, 'https://www.entertainmylife.com/pets/1' + req.originalUrl);
 
 // app.use(function forceLiveDomain(req, res, next) {
 //   // Don't allow user to hit Heroku now that we have a domain
