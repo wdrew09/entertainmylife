@@ -22,7 +22,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 // forceLiveDomain()
 
 console.log('here i am')
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
+  console.log(req.originalUrl)
+  console.log('hey')
   res.redirect(301, 'https://www.entertainmylife.com/' + req.originalUrl);
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
