@@ -73,3 +73,17 @@ export default App;
 //       });
 //   // }
 // });
+
+
+
+{/* <IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^entertainmylife.site$
+RewriteRule (.*) https://www.entertainmylife.site/$1 [R=301,L]
+</IfModule> */}
