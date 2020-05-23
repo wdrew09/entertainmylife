@@ -6,6 +6,8 @@ import firebase from '../firebase';
 
 import ImageUploading from "react-images-uploading";
 
+import Resizer from 'react-image-file-resizer';
+
 const Submit = props => {
 
     const [email, setEmail] = useState('')
@@ -55,6 +57,33 @@ const Submit = props => {
             })
             setHighestID(tempHighId)
         })
+
+
+
+
+        // firebase.storage().ref('/').listAll().then(function (result) {
+        //     result.prefixes.forEach(function (a) {
+        //         a.forEach(function (b) {
+        //             b.getDownloadURL().then(function (url) {
+        //                 // let picture = { name: imageName.name, url: url }
+        //                 // setDisplayPicture(picture)
+        //                 console.log(url)
+        //             })
+        //         })
+                
+        //     })
+        // })
+        // // .ref(data.imageFolder).child(data.displayPhoto)
+        // // imageName.forEach(element => {
+        // //     console.log(element)
+        // // });
+        // // getDownloadURL().then(function (url) {
+        // //     let picture = { name: imageName.name, url: url }
+        // //     setDisplayPicture(picture)
+        // // })
+
+
+
     }
 
     const auth = firebase.auth()
@@ -130,6 +159,22 @@ const Submit = props => {
     }
 
     const fileAdded = (imageList) => {
+        imageList.map(image => {
+            Resizer.imageFileResizer(
+                image.file,
+                350,
+                500,
+                'PNG',
+                100,
+                0,
+                uri => {
+                    image.dataURL = uri
+                    console.log(uri)
+                },
+                'base64'
+            );
+            console.log(image)
+        })
         setImages(imageList)
     }
 
@@ -203,11 +248,10 @@ const Submit = props => {
         })
     }
 
-    console.log(highestID)
 
     return (
         <div className={styles.Main}>
-            {!isLoggedIn ?
+            {isLoggedIn ?
                 <div className={styles.Login}>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder={'email'}></input>
                     <input value={pass} type={"password"} onChange={(e) => setPass(e.target.value)} placeholder={'password'}></input>
@@ -247,7 +291,7 @@ const Submit = props => {
                         <div style={{ marginLeft: '0px', display: 'flex', flexDirection: 'column', marginTop: '100px' }}>
                             <button onClick={() => addArticleValue('(add paragraph)')}>add paragraph</button>
                             <button onClick={() => addArticleValue('(add picture)')} style={{ marginTop: '10px' }}>add picture</button>
-                            <span style={{marginTop: '10px'}}>character count: {article.length}</span>
+                            <span style={{ marginTop: '10px' }}>character count: {article.length}</span>
                         </div>
                     </div>
                     <select onChange={(e) => addedTag(e.target.value)}>

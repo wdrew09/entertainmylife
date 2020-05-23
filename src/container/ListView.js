@@ -178,9 +178,9 @@ const ListView = props => {
                     </Masonry>
                     <div className={styles.Footer}>
                         {activePage !== 1 ?
-                            <NavLink activeClassName="active" to={`/${pageName}/${Number(activePage) - 1}`} ><button style={{ borderWidth: '1px' }} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleLeft} color='var(--main)' size="xs" /></button></NavLink>
+                            <NavLink activeClassName="active" to={`/${pageName}/${Number(activePage) - 1}`} ><button style={{ borderWidth: '1px' }} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleLeft} color='var(--main)' size="s" /></button></NavLink>
                             :
-                            <button style={{ borderWidth: '1px' }} disabled={true} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleLeft} color='var(--main)' size="xs" /></button>
+                            <button style={{ borderWidth: '1px' }} disabled={true} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleLeft} color='var(--main)' size="s" /></button>
                         }
                         {(activePage > 3) && <NavLink activeClassName="active" to={`/${pageName}/${1}`} ><button className={styles.PaginationButton}>1</button></NavLink>}
                         {(activePage - 3 > 1) && <button className={styles.PaginationButton}>...</button>}
@@ -195,9 +195,9 @@ const ListView = props => {
                         {(pageCount !== 1 && activePage < pageCount) && <NavLink activeClassName="active" to={`/${pageName}/${pageCount}`} ><button className={styles.PaginationButton}>{pageCount}</button></NavLink>}
 
                         {activePage !== pageCount ?
-                            <NavLink activeClassName="active" to={`/${pageName}/${activePage + 1}`} ><button className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleRight} color='var(--main)' size="xs" /></button></NavLink>
+                            <NavLink activeClassName="active" to={`/${pageName}/${activePage + 1}`} ><button className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleRight} color='var(--main)' size="s" /></button></NavLink>
                             :
-                            <button disabled={true} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleRight} color='var(--main)' size="xs" /></button>
+                            <button disabled={true} className={styles.PaginationButton}><FontAwesomeIcon icon={faAngleDoubleRight} color='var(--main)' size="s" /></button>
                         }
                     </div>
                 </div>

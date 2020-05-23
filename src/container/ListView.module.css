@@ -31,14 +31,15 @@
 }
 
 .PaginationButton {
-    font-size: 15px;
+    font-size: 18px;
     font-family: var(--font);
     font-weight: 700;
-    height: 34px;
-    width: 34px;
+    height: 45px;
+    width: 45px;
     color: var(--main);
     background-color: white;
     border-width: 1px 1px 1px 0px;
+    border-color: var(--gray-2);
     border-style: solid;
     cursor: pointer;
   }
@@ -52,11 +53,11 @@
   }
 
   .PaginationButtonSelected {
-    font-size: 15px;
+    font-size: 18px;
     font-family: var(--font);
     font-weight: 700;
-    height: 34px;
-    width: 34px;
+    height: 45px;
+    width: 45px;
     color: white;
     background-color: var(--main);
     border-width: 1px 1px 1px 0px;

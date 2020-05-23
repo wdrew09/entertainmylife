@@ -5,7 +5,10 @@ const port = process.env.PORT || 8080;
 var sslRedirect = require('heroku-ssl-redirect');
 const app = express();
 app.use(favicon(__dirname + '/build/favicon.ico'));
+var compression = require('compression')
+
 // the __dirname is the current directory from where the script is running
+app.use(compression())
 
 app.all(/.*/, function (req, res, next) {
   var host = req.header("host");
