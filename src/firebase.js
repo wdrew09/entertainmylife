@@ -4,7 +4,6 @@ import 'firebase/firebase-storage'
 import 'firebase/auth'
 import 'firebase/database'
 import 'firebase/analytics'
-import * as functions from 'firebase-functions'
 
 var firebaseConfig = {
     apiKey: "AIzaSyCBeBmU8XvO7QckDyoUCAJSGpTzAO4l24Y",
