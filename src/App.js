@@ -21,7 +21,7 @@ const App = props => {
 
   let content = (
     <Router>
-      <div>
+      <div itemScope>
         <Header />
         <Switch>
           <Route exact path="/:pagename/:id" component={ListView}></Route>
